@@ -1,4 +1,6 @@
 import React from "react";
+import Avatar from "./avatar";
+import Details from "./details";
 
 const contacts = [
   {
@@ -33,11 +35,10 @@ function Contact(props) {
     <div class="card">
       <div class="top">
         <h2 class="name">{res.name}</h2>
-        <img class="circle-img" src={res.imgURL} alt="avatar_img" />
+        <Avatar img={res.imgURL} />
       </div>
       <div class="bottom">
-        <p class="info">{res.phone}</p>
-        <p class="info">{res.email}</p>
+        <Details phone={res.phone} email={res.email} />
       </div>
     </div>
   );
